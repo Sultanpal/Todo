@@ -32,8 +32,8 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="/signup" element={<Enter setIsAuthenticated={setIsAuthenticated} setUserName={setUserName} />} />
-            <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} setUserName={setUserName} />} />
+            <Route path="/signup" element={<Enter setIsAuthenticated={setIsAuthenticated} setUserName={userName} />} />
+            <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} setUserName={userName} />} />
             <Route path="/home" element={isAuthenticated ? <Home /> : <About />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
@@ -75,7 +75,7 @@ function NavigateButton({ isAuthenticated }) {
 }
 
 function Bar({ isAuthenticated }) {
-  const name = useRecoilValue(userName)
+  const name = "balinder";
   const navigate = useNavigate();
   return (
     <div className='navBar'>
