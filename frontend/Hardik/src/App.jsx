@@ -2,7 +2,6 @@ import { useState, Suspense, useEffect } from 'react';
 import { RecoilRoot, useRecoilState, useRecoilValue } from "recoil";
 import { BrowserRouter, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import './App.css';
-import { userName } from './ATOM';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(1);
