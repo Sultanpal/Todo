@@ -75,7 +75,7 @@ function NavigateButton({ isAuthenticated }) {
 }
 
 function Bar({ isAuthenticated }) {
-  const name = "balinder";
+  const name = "balinder"; 
   const navigate = useNavigate();
   return (
     <div className='navBar'>
@@ -84,6 +84,7 @@ function Bar({ isAuthenticated }) {
       <div className='navBar2'>
         <div>Hello, {name} </div>
         <button className='u cursor' onClick={() => navigate("/signup")}>SignUp/Login</button>
+        <button className='u cursor' onClick={() => navigate("/")}>Log Out</button>
       </div>
     </div>
   );
@@ -175,9 +176,8 @@ function Home() {
 
   return (
     <div>
-      <div>Welcome to Home Page</div>
-      <div>
-        <h3>Add New Todo</h3>
+      <div className='contactContainer'>
+        <h2>Task Expert</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -191,11 +191,12 @@ function Home() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <button type="submit">Add</button>
+          <button type="submit" className='loginbtn'>Add</button>
         </form>
       </div>
-      <div className="">
+
         <h2>Your Todos</h2>
+      <div className="scroll length width ">
         {todos.length === 0 ? (
           <p>No todos found!</p>
         ) : (
@@ -203,11 +204,17 @@ function Home() {
             <div key={todo._id || index} className="card1">
               <h2>{todo.title}</h2>
               <p>{todo.description}</p>
+              <div>
+
+              <button className='loginbtn' onClick={() => handleDelete(todo._id)}>Delete</button>
               <button className='loginbtn' onClick={() => handleDelete(todo._id)}>Done</button>
+              </div>
             </div>
           ))
         )}
       </div>
+
+
 
     </div>
   );

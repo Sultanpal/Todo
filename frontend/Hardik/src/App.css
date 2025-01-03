@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+h2{
+    font-size: x-large;
+    text-transform: capitalize;
+}
 textarea{
     width: auto;
     padding: 20px;
@@ -18,7 +22,7 @@ textarea{
 }
 .navBar2{
     display: flex;
-    width: 10%;
+    width: 20%;
     justify-content: space-between;
 }
 .setBAR{
@@ -146,12 +150,14 @@ input{
 }
 
 .card1{
-    padding: 20px;
-    width: 600px;
-    background: #23d7bf;
+    padding: 10px;
     margin: 10px;
+    width: 500px;
+    height: 200px;
+    background: #23d7bf;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     font-weight: 800;
     
 }
@@ -191,4 +197,14 @@ input{
 .socialMedia{
     display: flex;
     justify-content: space-between;
+}
+/* ****************************** */
+.length{
+    height: 68vh;
+}
+.width{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
 }
