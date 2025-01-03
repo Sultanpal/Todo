@@ -206,8 +206,8 @@ function Home() {
               <p>{todo.description}</p>
               <div>
 
-              <button className='loginbtn' onClick={() => handleDelete(todo._id)}>Delete</button>
-              <button className='loginbtn' onClick={() => handleDelete(todo._id)}>Done</button>
+              <button className='loginbtn delete' onClick={() => handleDelete(todo._id)}>Delete</button>
+              <button className='loginbtn done' onClick={() => handleDelete(todo._id)}>Done</button>
               </div>
             </div>
           ))

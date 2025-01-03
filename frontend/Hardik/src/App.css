@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary-color:#002B5B;
+    --secondary-color:#D9D9D9;
+    --accent-color:#FFB800;
+    --text-color:#333333;
+    --background-color:#ffffff;
+
+}
 h2{
     font-size: x-large;
     text-transform: capitalize;
@@ -14,10 +22,10 @@ textarea{
 }
 .navBar,.footer{
     display: flex;
-    background-color: rgb(110, 53, 243);
+    background-color: var(--primary-color);
     justify-content: space-between;
     padding: 25px;
-    color: white;
+    color: var(--background-color);
 
 }
 .navBar2{
@@ -27,11 +35,10 @@ textarea{
 }
 .setBAR{
     display: flex;
-    /* border: 2px solid blue; */
     justify-content: space-between;
     width: 20%;
 }
-.profile{
+/* .profile{
     background-color: white;
     color: black;
     border-radius: 50%;
@@ -40,47 +47,19 @@ textarea{
     text-align: center;
     justify-content: center;
     font-weight: 800;
-}
+} */
 .footer{
     align-items: center;
     justify-content: center;
 }
-.list{
-    width: 100%;
-    height: 70vh;
-}
-.user{
-    display: flex;
-    justify-content:space-between;
-    /* background-color: gray; */
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid black;
-}
-.user:hover{
-    background-color: gray;
-}
-.userDetail{
-    font-weight: 800;
-    font-size: x-large;
-}
-.sendMoney{
-    background-color: rgb(110, 53, 243);
-    color: white;
-    border-radius: 3px;
-    padding: 5px;
-}
-.sendMoney:hover{
-    background-color: rgb(110, 53, 243);
-    cursor: pointer;
-}
+
+
 .u{
     text-decoration: underline;
 }
 .cursor{
     cursor: pointer;
 }
-
 .form1{
     width: 50%;
     height: 70vh;
@@ -111,9 +90,6 @@ input{
     justify-content: center;
     text-align: center;
 }
-.flex{
-    display: flex;
-}
     
 
 
@@ -128,7 +104,7 @@ input{
 .contactHeader{
     width: 100%;
     height: 20vh;
-    background-color: rgb(110, 53, 243);
+    background-color: var(--primary-color);
     font-size: xx-large;
     display: flex;
     align-items: center;
@@ -154,7 +130,8 @@ input{
     margin: 10px;
     width: 500px;
     height: 200px;
-    background: #23d7bf;
+    color: var(--text-color);
+    background: var(--secondary-color);
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -162,8 +139,8 @@ input{
     
 }
 .card1:hover{
-    color: #020202;
-    background: #00f846;
+    color:var();
+    background: var(--accent-color);
 
 }
 .border{
@@ -181,24 +158,6 @@ input{
     height: 60vh;
 }
 
-/* about page css  */
-.about{
-    display: flex;
-    padding: 30px;
-}
-.about1{
-    padding: 30px;
-    width: 50%;
-}
-.photoframe{
-    width: 50%;
-    border: 2px solid rgb(110, 53, 243);
-}
-.socialMedia{
-    display: flex;
-    justify-content: space-between;
-}
-/* ****************************** */
 .length{
     height: 68vh;
 }
@@ -207,4 +166,10 @@ input{
     background-color: #fff;
     display: flex;
     flex-wrap: wrap;
+}
+.delete:hover{
+    background-color: red;
+}
+.done:hover{
+    background-color: green;
 }
